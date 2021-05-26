@@ -456,7 +456,7 @@ def video_completion_seamless(args):
     create_dir(os.path.join(args.outroot, 'frame_seamless_comp_' + 'final'))
     for i in range(nFrame):
         img = video_comp[:, :, :, i] * 255
-        cv2.imwrite(os.path.join(args.outroot, 'frame_seamless_comp_' + 'final', '%05d.png'%i), img)
+        cv2.imwrite(os.path.join(args.outroot, 'frame_seamless_comp_' + 'final', '%06d.png'%i), img)
         # imageio.mimwrite(os.path.join(args.outroot, 'frame_seamless_comp_' + 'final', 'final.mp4'), video_comp_, fps=12, quality=8, macro_block_size=1)
         # imageio.mimsave(os.path.join(args.outroot, 'frame_seamless_comp_' + 'final', 'final.gif'), video_comp_, format='gif', fps=12)
 
