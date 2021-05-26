@@ -7,7 +7,7 @@
 ```bash
 python ./tool/video_completion_modified.py --mode object_removal --path ../data/test_a/video_0000/frames_corr --path_mask ../data/test_a/video_0000/masks --outroot ../data/result_test_a/video_0000 --seamless --edge_guide
 ```
-
+<br/><br/>
 # 第二届“马栏山杯”国际音视频算法大赛-视频补全介绍
 
 ## 数据说明
