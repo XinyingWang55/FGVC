@@ -1,5 +1,5 @@
 # Baseline
-本代码的基本流程：计算稠密光流（RAFT）-> 计算边缘（Canny）-> 补全边缘（EdgeConnect）-> 补全光流（解Ax=b）-> 传播RGB值 <br/>
+本代码的基本流程：计算稠密光流（RAFT）-> 计算边缘（Canny）-> 补全边缘（EdgeConnect）-> 补全光流（解Ax=b）-> 传播RGB值 <br/><br/>
 在基于原作代码的基础上，为了增速，我修改了一下其中的光流补全部分。原作是全图去解Ax=b，特别特别慢。我改成了crop后再进去，解Ax=b会快些。<br/>
 在test_a数据集上，本baseline的最终分数约为68.69。<br/>
 
