@@ -1,14 +1,18 @@
 # Baseline
 本代码的基本流程：计算稠密光流（RAFT）-> 计算边缘（Canny）-> 补全边缘（EdgeConnect）-> 补全光流（解Ax=b）-> 传播RGB值 <br/><br/>
 在基于原作代码的基础上，为了增速，我修改了一下其中的光流补全部分。原作是全图去解Ax=b，特别特别慢。我改成了crop后再进去，解Ax=b会快些。<br/>
-在test_a数据集上，本baseline的最终分数约为68.69。<br/>
+在test_a数据集上，本baseline的最终分数约为68.7054。<br/>
 
 用法：
 ```bash
 python ./tool/video_completion_modified.py --mode object_removal --path ../data/test_a/video_0000/frames_corr --path_mask ../data/test_a/video_0000/masks --outroot ../data/result_test_a/video_0000 --seamless --edge_guide
 ```
 <br/>
-温馨提示：在比赛官网提交结果时，顶上将有进度条，且提交成功后会有提示。接收到"提交成功"的提示前不要关掉页面哦。
+温馨提示：
+1) 在比赛官网提交结果时，顶上将有进度条，且提交成功后会有提示。接收到"提交成功"的提示前不要关掉页面哦。
+2) 评分失败时提示"folder number unmatch"的错误时，原因可能有以下两个: 1.即为提交的视频文件夹数量有错, video_*** 的数量要100个。请查看是否多了不相关文件夹/或者是少了某些视频文件夹; 2. 请直接从内部打包，即result.zip解压后即为 result/video_0*** 而不是 aaa/result/video_0***
+3) 评分失败时提示"image not found"的错误时，请检查每个文件夹里的图片个数是否完整，命名是否正确。
+4) 评分失败时提示"image size unmatch"的错误时，请检查图片大小是否如bbox.txt所示。
 <br/><br/>
 
 # 第二届“马栏山杯”国际音视频算法大赛-视频补全介绍
@@ -51,7 +55,8 @@ img = cv2.imread("result_000000.png")
 crop_img = img[y:y+h, x:x+w, :]
 cv2.imwrite("crop_000000.png", crop_img)
 ```
-选手需要将裁剪后的图片文件按放入各个视频文件夹（video_0***），最后一起打包成*.zip格式后上传（正常大小不超过2G）。文件夹结构和命名规则如下(以test_a为例)：
+选手需要将裁剪后的图片文件按放入各个视频文件夹（video_0***），最后一起打包成*.zip格式后上传（正常大小不超过2G）。请直接在内部打包，即result.zip解压后即为 result/video_0*** 而不是 aaa/result/video_0***。
+文件夹结构和命名规则如下(以test_a为例)：
 ```bash
                       |—— crop_000000.png
        |—— video_0000 |—— crop_000001.png
