@@ -55,7 +55,7 @@ img = cv2.imread("result_000000.png")
 crop_img = img[y:y+h, x:x+w, :]
 cv2.imwrite("crop_000000.png", crop_img)
 ```
-选手需要将裁剪后的图片文件按放入各个视频文件夹（video_0***），最后一起打包成*.zip格式后上传（正常大小不超过2G）。请直接在内部打包，即result.zip解压后即为 result/video_0*** 而不是 aaa/result/video_0***。
+选手需要将裁剪后的图片文件按放入各个视频文件夹（video_0***），最后一起打包成*.zip格式后上传（正常大小不超过2G）。请直接在内部打包，即result.zip解压后即为 result/video_0*** 而不是 aaa/result/video_0***。 (result可任意命名, 你可以随意命名成result_0608, aaa_123等等)
 文件夹结构和命名规则如下(以test_a为例)：
 ```bash
                       |—— crop_000000.png
