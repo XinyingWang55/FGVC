@@ -39,15 +39,15 @@ train3（341个视频，压缩包大小646M），为去年点位跟踪赛道val�
 本大赛提供的数据版权归芒果TV所有，参赛选手不能将其泄露或用于本大赛外其他用途。<br/>
 
 ## 数据下载链接
-百度云链接：https://pan.baidu.com/s/1Xr6WbemBGGNw0l5lS_VKWA 
-提取码：mgtv 
+百度云链接：https://pan.baidu.com/s/1Xr6WbemBGGNw0l5lS_VKWA <br/>
+提取码：mgtv <br/>
 
-直接下载链接：
-http://ad-implant.oss-cn-beijing.aliyuncs.com/challenge/res/8/a/train_1.zip
-http://ad-implant.oss-cn-beijing.aliyuncs.com/challenge/res/8/a/train_2.zip
-http://ad-implant.oss-cn-beijing.aliyuncs.com/challenge/res/8/a/train_3.zip
-http://ad-implant.oss-cn-beijing.aliyuncs.com/challenge/res/8/a/val.zip
-http://ad-implant.oss-cn-beijing.aliyuncs.com/challenge/res/8/a/test_a.zip
+直接下载链接：<br/>
+http://ad-implant.oss-cn-beijing.aliyuncs.com/challenge/res/8/a/train_1.zip <br/>
+http://ad-implant.oss-cn-beijing.aliyuncs.com/challenge/res/8/a/train_2.zip <br/>
+http://ad-implant.oss-cn-beijing.aliyuncs.com/challenge/res/8/a/train_3.zip <br/>
+http://ad-implant.oss-cn-beijing.aliyuncs.com/challenge/res/8/a/val.zip <br/>
+http://ad-implant.oss-cn-beijing.aliyuncs.com/challenge/res/8/a/test_a.zip <br/>
 
 ## 评估指标
 初赛和复赛通过评估选手提交的结果来评分，本次比赛采用PSNR和SSIM两种评价指标。对于上传的结果，评估程序将计算挖空区域的PSNR和SSIM两种指标，均采用逐帧计算并进行平均。最终，PSNR和SSIM进行加权计算，并得到最终竞赛得分。PSNR取值在[0, 80]，优秀分值范围大约在[30, 50]；SSIM取值在[0, 1]，优秀分值范围大约在[0.8, 1]
