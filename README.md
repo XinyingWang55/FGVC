@@ -49,6 +49,16 @@ http://ad-implant.oss-cn-beijing.aliyuncs.com/challenge/res/8/a/train_3.zip <br/
 http://ad-implant.oss-cn-beijing.aliyuncs.com/challenge/res/8/a/val.zip <br/>
 http://ad-implant.oss-cn-beijing.aliyuncs.com/challenge/res/8/a/test_a.zip <br/>
 
+用来校验文件传输完整的MD5值：<br/>
+train_1.zip:  83ced2b4e80231105eb6dc8d2fae9e29 <br/>
+train_2.zip:  792a21b974d83084c9e2bf81af0c9e10 <br/>
+train_3.zip:  e07011f6f1d149c6508a0ae50a76e18b <br/>
+val.zip:      6d16b879cd618358f941477eeed9a4bd <br/>
+test_a.zip:   b146ed76a53f556fe36c9012da03bf94 <br/>
+ <br/> 
+linux下命令：md5sum test_a.zip  <br/>
+windows下命令：certutil -hashfile test_a.zip MD5  <br/>
+
 ## 评估指标
 初赛和复赛通过评估选手提交的结果来评分，本次比赛采用PSNR和SSIM两种评价指标。对于上传的结果，评估程序将计算挖空区域的PSNR和SSIM两种指标，均采用逐帧计算并进行平均。最终，PSNR和SSIM进行加权计算，并得到最终竞赛得分。PSNR取值在[0, 80]，优秀分值范围大约在[30, 50]；SSIM取值在[0, 1]，优秀分值范围大约在[0.8, 1]
 ```bash
