@@ -54,7 +54,7 @@ def SSIM(y,t,value_range=255):
 #     return 1-loss_v
 
 
-def Evaluate(files_gt, files_pred, methods = [PSNR,MSE,SSIM]):
+def Evaluate(files_gt, files_pred, methods = [PSNR,SSIM]):
     score = {}
     for meth in methods:
         name = meth.__name__
