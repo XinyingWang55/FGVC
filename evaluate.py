@@ -1,6 +1,6 @@
 '''
-线上测试使用的是GPU版本。
-这里我们也提供了CPU版的测试代码。CPU版本和GPU版本分值有差别：此baseline的cpu测评结果为68.6891, 此baseline的gpu测评结果为68.7054
+线上测试使用的是GPU版本(调的是piq库)。这里面我们也提供了CPU版的测试代码(调的是skimage库)。
+CPU版本和GPU版本分值有差别：此baseline的cpu测评结果为68.6891, gpu测评结果为68.7054
 
 error_code:  
 -1 error: video number unmatch
@@ -11,16 +11,12 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 import json
-from skimage.metrics import mean_squared_error as compare_mse
 from skimage.metrics import peak_signal_noise_ratio as compare_psnr
 from skimage.metrics import structural_similarity as ssim
 import numpy as np
 import argparse
 import glob
 from PIL import Image
-import time
-from multiprocessing import Pool, Manager
-from multiprocessing.pool import ThreadPool
 import torch
 import cv2
 from piq import ssim, SSIMLoss
