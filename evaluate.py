@@ -107,7 +107,7 @@ def evaluate(args):
         for j in range(0,len(image_list)):
             if video_gt[j].shape!=video_predict[j].shape:
                 error_code=-3
-                error_flag= 'image size unmatch.' + video_predict[j]
+                error_flag= 'image size unmatch. please check video_' + str(i).zfill(4)+'/crop_'+str(j).zfill(4)
                 return error_code, error_flag, 0
 
         # sent in whole video
