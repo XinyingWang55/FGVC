@@ -36,9 +36,9 @@ def SSIM(y,t,value_range=255):
 
 # GPU版本。
 # def PSNR(ximg,yimg):
-#     gt_tensor = torch.from_numpy(yimg)
-#     img_tensor = torch.from_numpy(ximg)
-#     psnr_v = psnr(img_tensor.cuda(), gt_tensor.cuda(),data_range=255.).item()
+#     gt_tensor = torch.from_numpy(yimg.transpose([2,0,1])).unsqueeze(0).cuda()
+#     img_tensor = torch.from_numpy(ximg.transpose([2,0,1])).unsqueeze(0).cuda()
+#     psnr_v = psnr(img_tensor, gt_tensor, data_range=255.).item()
 #     #print(psnr_v)
 #     return psnr_v
 
