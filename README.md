@@ -53,6 +53,7 @@ http://ad-implant.oss-cn-beijing.aliyuncs.com/challenge/res/8/a/train_2.zip <br/
 http://ad-implant.oss-cn-beijing.aliyuncs.com/challenge/res/8/a/train_3.zip <br/>
 http://ad-implant.oss-cn-beijing.aliyuncs.com/challenge/res/8/a/val.zip <br/>
 http://ad-implant.oss-cn-beijing.aliyuncs.com/challenge/res/8/a/test_a.zip <br/>
+http://ad-implant.oss-cn-beijing.aliyuncs.com/challenge/res/8/b/test_b.zip <br/>
 
 用来校验文件传输完整的MD5值：<br/>
 train_1.zip:  83ced2b4e80231105eb6dc8d2fae9e29 <br/>
@@ -60,6 +61,7 @@ train_2.zip:  792a21b974d83084c9e2bf81af0c9e10 <br/>
 train_3.zip:  e07011f6f1d149c6508a0ae50a76e18b <br/>
 val.zip:      6d16b879cd618358f941477eeed9a4bd <br/>
 test_a.zip:   b146ed76a53f556fe36c9012da03bf94 <br/>
+test_b.zip:   f2f8b00df148621f25270ad1fd5e2362 <br/>
  <br/> 
 linux下命令：md5sum test_a.zip  <br/>
 windows下命令：certutil -hashfile test_a.zip MD5  <br/>
