@@ -44,7 +44,7 @@ train3（341个视频，压缩包大小646M），为去年点位跟踪赛道val�
 本大赛提供的数据版权归芒果TV所有，参赛选手不能将其泄露或用于本大赛外其他用途。<br/>
 
 ## 数据下载链接
-百度云链接：https://pan.baidu.com/s/1Xr6WbemBGGNw0l5lS_VKWA <br/>
+百度云链接：https://pan.baidu.com/s/1xUvLiAw3YGv6s1Ll780yUg  <br/>
 提取码：mgtv <br/>
 
 直接下载链接：<br/>
